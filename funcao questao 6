@@ -1,0 +1,335 @@
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int numero(int n)
+{
+    if(n>0){
+
+        return 1;
+    }
+    else if(n<0){
+
+    return 0;
+    }
+    else if(n == 0){
+
+    return 23422;
+
+    }
+
+}
+
+int main()
+{
+    int n;
+    printf("informe o numero");
+    scanf("%d",&n);
+
+    numero(n);
+
+    printf("%d",numero(n));
+
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float equacao(float a,float b,float c,float delta)
+{
+    delta=b*b-4*(a*c);
+
+    return delta;
+
+}
+
+int main()
+{
+    float a,b,c,delta=0;
+    printf("informe o numero a,b e c\n");
+    scanf("%f%f%f",&a,&b,&c);
+
+    equacao(a,b,c,delta);
+
+    printf("%f%f%f%f",equacao(a,b,c,delta));
+    }
+
+
+#include <stdio.h>
+
+#define N 5
+
+//VETORES ------------------------------------------
+//encontra o menor elemento no vetor
+int min_vet(int a, int b, int vet[N])
+{
+	int i, m = vet[a];
+
+	for(i = a; i <= b; i++)
+	{
+		if(vet[m] > vet[i])
+			m = i;
+	}
+
+	return m;
+}
+
+void troca(int a, int b, int vet[N])
+{
+	int aux;
+
+	aux = vet[a];
+	vet[a] = vet[b];
+	vet[b] = aux;
+}
+
+//ordena um vetor
+int selection_sort(int vet[N])
+{
+	int i, m;
+
+	for(i = 0; i < N; i++)
+	{
+		m = min_vet(i, N - 1, vet);
+		troca(m, i, vet);
+	}
+}
+
+void print_vetor(int vet[N])
+{
+	int i;
+	for(i = 0; i < N; i++)
+	{
+		printf("%d ", vet[i]);
+	}
+	printf("\n");
+}
+
+
+//MAIN ------------------------------------------
+
+int main()
+{
+	int vet[N] = {3, 4, 5, 1, 4}, i;
+
+	printf("VETORES:\n");
+
+	printf("Vetor NÃO ordenado: ");
+	print_vetor(vet);
+
+	i = min_vet(0, N -1, vet);
+	printf("minimo do vetor não ordenado: vet[%d] = %d\n", i, vet[i]);
+
+	printf("Vetor ordenado: ");
+	selection_sort(vet);
+	print_vetor(vet);
+
+	return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int soma(    int n1,int n2)
+{
+     return n1+n2;
+}
+int substracao( int n1,int n2)
+{
+     return n1-n2;
+}
+int  divisao( int n1,int n2)
+{
+     return n2/n1;
+}
+int  multiplicacao( int n1, int n2)
+{
+     return n1*n2;
+
+}
+void calcula(char opcao,int n1,int n2){
+
+    if(opcao=='a'){
+
+        printf("%d",soma(n1,n2));
+    }
+    else if(opcao=='b'){
+
+        printf("%d",substracao(n1,n2));
+    }
+    else if(opcao=='c'){
+
+        printf("%d",divisao(n1,n2));
+    }
+    else if(opcao=='d'){
+
+        printf("%d",multiplicacao(n1,n2));
+    }
+ }
+int main()
+{
+    char opcao;
+    int n1,n2;
+    scanf("%c",&opcao);
+    scanf("%d %d",&n1,&n2);
+
+    calcula(opcao,n1,n2);
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int soma(    int n1,int n2)
+{
+     return n1+n2;
+}
+int substracao( int n1,int n2)
+{
+     return n1-n2;
+}
+int  divisao( int n1,int n2)
+{
+     return n2/n1;
+}
+int  multiplicacao( int n1, int n2)
+{
+     return n1*n2;
+
+}
+void calcula(char opcao,int n1,int n2){
+
+    if(opcao=='a'){
+
+        printf("%d",soma(n1,n2));
+    }
+    else if(opcao=='b'){
+
+        printf("%d",substracao(n1,n2));
+    }
+    else if(opcao=='c'){
+
+        printf("%d",divisao(n1,n2));
+    }
+    else if(opcao=='d'){
+
+        printf("%d",multiplicacao(n1,n2));
+    }
+ }
+int main()
+{
+    char opcao;
+    int n1,n2;
+    scanf("%c",&opcao);
+    scanf("%d %d",&n1,&n2);
+
+    calcula(opcao,n1,n2);
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10
+void min_vet1( int vet1[N])
+{
+	int i;
+
+	for(i = 0; i <N; i++)
+	{
+		vet1[i]=i;
+
+    printf("%d ",vet1[i]);
+    }
+}
+
+int main()
+{
+    int vet[N];
+    int i;
+
+    min_vet1(vet);
+
+    for(i = 0; i <N; i++)
+	{
+
+    printf("%d ",vet[i]);
+    }
+
+
+    return 0;
+}
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 10
+void min_vet1( int vet1[N])
+{
+	int i;
+
+	for(i = 0; i <N; i++)
+	{
+		vet1[i]=i;
+
+  // printf("%d ",vet1[i]);
+    }
+}
+
+void min_vet2( int vet2[N])
+{
+	int i,cont=10;
+
+	for(i = 0; i <N; i++)
+	{
+		vet2[i]=cont;
+		cont--;
+
+    //printf("%d ",vet2[i]);
+    }
+}
+void min_vet3( int vet3[N])
+{
+	int i;
+
+	for(i = 0; i <N; i++)
+	{
+		printf("informe o vetor:\n ");
+		scanf("%d ",vet3[i]);
+
+    //printf("%d ",vet3[i]);
+
+    }
+}
+void print(char opcao,int vet[N])
+{
+    int i;
+    if(opcao=='a'){
+
+        print("%d ",min_vet1(vet[i]))
+    }
+    if(opcao=='b'){
+
+        print("%d ",min_vet2(vet[i]))
+    }
+    if(opcao=='c'){
+
+        print("%d ",min_vet3(vet[i]))
+    }
+}
+
+int main()
+{
+    int opcao,vet[N];
+    int i;
+
+    print(opcao,vet);
+
+    return 0;
+}
